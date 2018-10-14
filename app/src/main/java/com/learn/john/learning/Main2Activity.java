@@ -25,7 +25,7 @@ public class Main2Activity extends AppCompatActivity {
         lambobutton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                String lambosite = "https://www.lamborghini.com/en-en";
+                String lambosite = "https://www.linkedin.com/in/johnlee46/";
                 Uri webaddress = Uri.parse(lambosite);
 
                 Intent gotoLambo = new Intent(Intent.ACTION_VIEW, webaddress);

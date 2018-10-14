@@ -29,13 +29,22 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        Button thirdActivityBtn = (Button) findViewById(R.id.maps);
+        thirdActivityBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntent2 = new Intent(getApplicationContext(), MapsActivity.class);
+                startIntent2.putExtra("maps", "Maps!");
+                startActivity(startIntent2);
+            }
+        });
 
         Button secondActivityBtn = (Button) findViewById(R.id.lambo);
         secondActivityBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent startIntent = new Intent(getApplicationContext(), Main2Activity.class);
-                startIntent.putExtra("LAMBOS", "BOUT TO GET IT");
+                startIntent.putExtra("LAMBOS", "CHECK OUT MY LINKEDIN!");
                 startActivity(startIntent);
             }
         });
@@ -51,7 +60,7 @@ public class MainActivity extends AppCompatActivity
                 int num1 = Integer.parseInt(editText.getText().toString());
                 int num2 = Integer.parseInt(editText2.getText().toString());
                 int result = num1 + num2;
-                resultTextView.setText("" + result + " Lamborghinis");
+                resultTextView.setText("" + result + " Addition!");
 
 
 
